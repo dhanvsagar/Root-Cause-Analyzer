@@ -1,3 +1,9 @@
+
+# Root Cause Analyzer.
+# Tool for analysing performance problems in enterprise IT systems
+# Developed by DHAN V SAGAR
+# contact dhanvsagar(at)gmail(dot)com
+
 library(shiny)
 
 shinyUI(fluidPage( 
@@ -27,14 +33,14 @@ shinyUI(fluidPage(
     ),
     mainPanel(
 		tabsetPanel(type = "tabs", 
-		tabPanel("Dataset", tableOutput("test1")),
+		#tabPanel("Dataset", tableOutput("test1")),
 		tabPanel("Dataset", tableOutput("dataset")),
 		tabPanel("Summary", verbatimTextOutput("summary")),
 		tabPanel("Decision Tree", plotOutput("dtplot")),	
 		tabPanel("Random Forest", verbatimTextOutput("rf")),
 		tabPanel("Statistical Chabge Points", verbatimTextOutput("cp")),
 		tabPanel("Root Causes", tableOutput("rootcause")),
-		tabPanel("About", verbatimTextOutput("about")))
+		tabPanel("About", textOutput("about")))
 		
       
     )
